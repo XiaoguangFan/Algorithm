@@ -11,9 +11,12 @@ public class Main {
 			{
 				for(int j = i; j > 0; j--)	
 				{
-					int randomNumber = randomArray[j];
+					if(randomArray[j - 1] == 0)
+					{
+						break;
+					}
 					randomArray[j] = randomArray[j - 1];
-					randomArray[j - 1] = randomNumber;
+					randomArray[j - 1] = 0;
 				}
 			}
 		}
